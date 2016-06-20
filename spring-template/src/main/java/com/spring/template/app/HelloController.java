@@ -18,12 +18,10 @@ public class HelloController {
 
 	}
 
-	@RequestMapping(value = "/hello/{name:.+}", method = RequestMethod.GET)
-	public ModelAndView hello(@PathVariable("name") String name) {
+	@RequestMapping(value = "/hello", method = RequestMethod.POST)
+	public ModelAndView hello() {
 
 		ModelAndView model = new ModelAndView();
-		model.setViewName("hello");
-		model.addObject("msg", name);
 
 		return model;
 
